@@ -22,10 +22,10 @@ function App() {
   }, []);
 
   const Search = products.filter((product) => {
-    if (product.name.toLowerCase() === search || !search) {
+    if (product.name.toLowerCase().includes(search.toLowerCase()) || !search) {
       return true;
     } else {
-      return product.category.toLowerCase().includes(search.toLocaleLowerCase());
+      return product.category.toLowerCase().includes(search.toLowerCase());
     }
   });
 
