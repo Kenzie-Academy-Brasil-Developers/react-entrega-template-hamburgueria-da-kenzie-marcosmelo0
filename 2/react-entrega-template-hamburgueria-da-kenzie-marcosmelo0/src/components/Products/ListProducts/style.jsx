@@ -5,7 +5,7 @@ export const ContainerProducts = styled.section`
 
   @media (min-width: 700px) {
     width: 50vw;
-    margin-left: 115px
+    margin-left: 115px;
   }
 
   strong {

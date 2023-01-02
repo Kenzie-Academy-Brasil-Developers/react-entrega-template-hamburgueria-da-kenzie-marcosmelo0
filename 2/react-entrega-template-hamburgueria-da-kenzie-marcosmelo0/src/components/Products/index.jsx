@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ProductContext } from "../providers/ProductsContext";
 import { Product } from "./ListProducts/Card/card";
 import { ContainerProducts, StyledUl } from "./ListProducts/style";
 
-export const ProductList = ({
-  products,
-  setCurrentSale,
-  addProductToCart,
-  filteredProducts,
-  search,
-}) => {
+export const ProductList = () => {
+  const { products, filteredProducts, search, Search } =
+    useContext(ProductContext);
   return (
     <ContainerProducts>
       {search !== "" && (
@@ -17,23 +14,9 @@ export const ProductList = ({
         </h2>
       )}
       <StyledUl>
-        {filteredProducts.length !== 0
-          ? filteredProducts.map((product) => (
-              <Product
-                key={product.id}
-                addProductToCart={addProductToCart}
-                product={product}
-                setCurrentSale={setCurrentSale}
-              />
-            ))
-          : products.map((product) => (
-              <Product
-                key={product.id}
-                addProductToCart={addProductToCart}
-                product={product}
-                setCurrentSale={setCurrentSale}
-              />
-            ))}
+        {Search.map((product) => (
+          <Product key={product.id} product={product} />
+        ))}
       </StyledUl>
     </ContainerProducts>
   );

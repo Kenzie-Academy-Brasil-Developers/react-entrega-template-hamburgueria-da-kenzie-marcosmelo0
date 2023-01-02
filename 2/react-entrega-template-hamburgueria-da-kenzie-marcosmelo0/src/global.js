@@ -22,4 +22,6 @@ export const GlobalStyle = createGlobalStyle`
     ul, ol, li {
         list-style: none;
     }
+
+    
 ` 

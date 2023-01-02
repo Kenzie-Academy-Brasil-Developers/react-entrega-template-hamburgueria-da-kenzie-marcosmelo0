@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ButtonGreen } from "../../../Button";
+import { ProductContext } from "../../../providers/ProductsContext";
 import { StyledLi } from "../style";
 
-export const Product = ({ product, addProductToCart }) => {
+export const Product = ({product}) => {
+  const { addProductToCart } = useContext(ProductContext);
+
   return (
     <StyledLi>
       <div className="DivImgProduct">

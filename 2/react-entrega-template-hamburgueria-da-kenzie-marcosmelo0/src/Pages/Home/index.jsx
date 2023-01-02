@@ -1,37 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Header } from "../../components/Header";
 import { ProductList } from "../../components/Products";
 import { Cart } from "../../components/Products/Cart";
+import { ProductContext } from "../../components/providers/ProductsContext";
 import { ContainerApp, MainContainer } from "./style";
 
-export const HomePage = ({
-  products,
-  currentSale,
-  setCurrentSale,
-  addProductToCart,
-  removeProductCart,
-  filteredProducts,
-  search,
-  setSearch,
-}) => {
+export const HomePage = () => {
+  const {openModal} = useContext(ProductContext)
   return (
     <ContainerApp>
-      <Header setSearch={setSearch} />
+      <Header />
       <MainContainer>
-        <ProductList
-          search={search}
-          filteredProducts={filteredProducts}
-          addProductToCart={addProductToCart}
-          products={products}
-          setCurrentSale={setCurrentSale}
-        />
-        <div className="divCart">
-          <Cart
-            setCurrentSale={setCurrentSale}
-            currentSale={currentSale}
-            removeProductCart={removeProductCart}
-          />
-        </div>
+        <ProductList />
+        {openModal && <div className="divCart">
+          <Cart />
+        </div>}
       </MainContainer>
     </ContainerApp>
   );

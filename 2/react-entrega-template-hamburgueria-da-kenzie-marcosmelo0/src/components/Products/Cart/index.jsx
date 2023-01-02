@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ButtonGray } from "../../Button";
+import { ProductContext } from "../../providers/ProductsContext";
 import { TotalCart } from "../../TotalCart";
 import { CartCard } from "./Card";
 import { EmptyCart } from "./EmptyCart";
 import { HeaderCart, StyledCartUl } from "./styles";
 
-export const Cart = ({ currentSale, removeProductCart, setCurrentSale }) => {
+export const Cart = () => {
+  const { currentSale, removeProductCart, setCurrentSale } =
+    useContext(ProductContext);
+    const { toggleModal } = useContext(ProductContext)
   return (
     <>
-      <section className="sectionCart">
-        <HeaderCart className="titleCart">Carrinho de compras</HeaderCart>
+      <dialog className="sectionCart">
+        <HeaderCart className="titleCart">Carrinho de compras
+        <div><span onClick={toggleModal}>X</span></div></HeaderCart>
 
         {currentSale.length !== 0 ? (
           <StyledCartUl>
@@ -29,7 +34,7 @@ export const Cart = ({ currentSale, removeProductCart, setCurrentSale }) => {
         ) : (
           <EmptyCart />
         )}
-      </section>
+      </dialog>
     </>
   );
 };

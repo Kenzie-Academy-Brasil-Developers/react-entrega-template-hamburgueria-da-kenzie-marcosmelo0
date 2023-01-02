@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const HeaderCart = styled.div`
   background: #27ae60;
   color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5%;
 
   font-weight: 700;
   font-size: 18px;
@@ -15,6 +18,10 @@ export const HeaderCart = styled.div`
   width: 90vw;
   border-radius: 5px 5px 0px 0px;
   margin-left: 5%;
+
+  span {
+    color: rgba(255, 255, 255, 0.5);
+  }
 
   @media (min-width: 700px) {
     position: relative;
@@ -47,7 +54,7 @@ export const StyledCartUl = styled.ul`
     max-width: 365px;
     width: 100%;
     margin: 0;
-}
+  }
 `;
 
 export const StyledEmptyCart = styled.section`
