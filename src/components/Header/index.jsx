@@ -23,6 +23,7 @@ export const Header = () => {
     localStorage.clear()
     window.location.replace("/")
   }
+  
 
   return (
     <HeaderStyled>
