@@ -11,19 +11,22 @@ export const StyledTotalCart = styled.section`
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 20px;
+    padding-left: 2.5vw;
+    padding-top: 2vw;
   }
-
+  
   div {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 103%;
   }
-
+  
   span {
     color: #828282;
-
+    
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
+    padding-top: 2vw;
   }
 `;

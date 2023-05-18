@@ -1,25 +1,20 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.main`
+  dialog::backdrop {
+    background-color: rgb(0 0 0 / 0.5);
+  }
 
   dialog {
-    position: absolute;
     border: none;
     display: flex;
     top: 10vh;
     flex-direction: column;
+    box-shadow: rgb(0 0 0 / 0.5);
 
     section {
       margin: 0;
       padding: 0;
-      
-    }
-    
-  }
-  
-  .divCart {
-    @media (min-width: 700px) {
-      margin-right: 5%;
     }
   }
 
