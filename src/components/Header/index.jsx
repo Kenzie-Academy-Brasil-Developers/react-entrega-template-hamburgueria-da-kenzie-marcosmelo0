@@ -19,6 +19,11 @@ export const Header = () => {
     setSearchInput(!searchInput);
   };
 
+  const handleLogout = () => {
+    localStorage.clear()
+    window.location.replace("/")
+  }
+
   return (
     <HeaderStyled>
       <div className="divImg">
@@ -33,7 +38,7 @@ export const Header = () => {
             <img onClick={toggleModal} src={cart} alt="botão do carrinho" />
             <span>{currentSale.length}</span>
           </div>
-          <img src={logout} alt="botão de sair da conta" />
+          <img onClick={handleLogout} src={logout} alt="botão de sair da conta" />
         </div>
       </div>
       <div className="divSearch">

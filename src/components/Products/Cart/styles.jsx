@@ -21,23 +21,21 @@ export const HeaderCart = styled.div`
 
   span {
     color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
   }
 
   @media (min-width: 700px) {
-    position: relative;
-    width: 100%;
-    max-width: 365px;
-    margin: 20px 0 0;
+    position: absolute;
+    width: 100vw;
+    max-width: 40vw;
+    margin-left: 30vw;
   }
 `;
 
 export const StyledCartUl = styled.ul`
   background: #f5f5f5;
   border-radius: 0px 0px 5px 5px;
-  width: 90vw;
-  margin-left: 5%;
   padding-bottom: 5%;
-  margin-bottom: 5%;
 
   hr {
     width: 90%;
@@ -51,9 +49,10 @@ export const StyledCartUl = styled.ul`
   }
 
   @media (min-width: 700px) {
-    max-width: 365px;
-    width: 100%;
-    margin: 0;
+    position: absolute;
+    width: 40vw;
+    margin-left: 30vw;
+    margin-top: 55px;
   }
 `;
 
@@ -69,8 +68,10 @@ export const StyledEmptyCart = styled.section`
     width: 95vw;
 
     @media (min-width: 700px) {
-      width: 100%;
-      max-width: 365px;
+      position: absolute;
+      width: 40vw;
+      margin-left: 30vw;
+      margin-top: 55px;
     }
   }
 

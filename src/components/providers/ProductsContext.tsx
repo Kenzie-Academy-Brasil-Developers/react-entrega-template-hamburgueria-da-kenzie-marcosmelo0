@@ -12,7 +12,7 @@ export const ProductProvider = ({ children }: iDefaultProviderProps) => {
   const [currentSale, setCurrentSale] = useState<iProduct[]>([]);
   const [search, setSearch] = useState("");
   const [openModal, setOpenModal] = useState(false)
-
+  
   const toggleModal = () => {
     setOpenModal(!openModal)
   }

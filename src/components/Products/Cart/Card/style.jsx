@@ -44,6 +44,7 @@ export const StyledCardCart = styled.li`
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
+    cursor: pointer;
   }
 
   button {
@@ -52,11 +53,19 @@ export const StyledCardCart = styled.li`
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
+    padding-right: 10px;
 
     &:hover {
       color: #333333;
 
       text-decoration: underline;
+    }
+  }
+
+  @media (min-width: 700px) {
+    .divCart {
+      position: absolute;
+      margin-left: 25vw;
     }
   }
 `;
