@@ -54,8 +54,8 @@ export const FormLogin = () => {
         Crie sua conta para saborear muitas delícias e matar sua fome!
       </span>
 
-      <ButtonGray type="button">
-        <Link to="/register">Cadastrar</Link>
+      <ButtonGray onClick={() => { window.location.href = '/register'; }}>
+        Cadastrar
       </ButtonGray>
     </FormStyled>
   );
